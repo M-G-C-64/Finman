@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalnia:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body class="body" id="body">
+    <div class="project">
+      <div class="project-name" id="project-name">FM</div>
+      <div class="project-description">FINANCE MANAGER</div>
+    </div>
+
+    <script>
+      setTimeout(function () {
+        var body = document.getElementById("body");
+        body.classList.add("red-yellow");
+        setTimeout(function () {
+          var extractText = document.getElementById("project-name");
+          extractText.classList.remove("project-name");
+          extractText.classList.add("remove");
+          extractText.innerText = "EXTRACTING";
+          //extractText.classList.add("project-extracting");
+        }, 2000);
+      }, 5000);
+      //sleep(5000);
+      setTimeout(function () {
+        var body = document.getElementById("body");
+        body.classList.remove("red-yellow");
+        body.classList.add("yellow-green");
+        setTimeout(function () {
+          var extractText = document.getElementById("project-name");
+          extractText.classList.remove("remove");
+          extractText.classList.add("remove2");
+          extractText.innerText = "SUCCESS";
+          //extractText.classList.add("project-extracting");
+        }, 2000);
+      }, 10000);
+    </script>
+  </body>
+</html>
