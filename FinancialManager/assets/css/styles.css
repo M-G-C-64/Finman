@@ -1,7 +1,68 @@
 .body {
+  padding: 0px;
+  margin: 0px;
+  z-index: 1;
   height: 90vh;
   /* animation: fadecolor 2s forwards; */
   background-color: rgb(190, 0, 25);
+}
+
+.two-blocks {
+  width: 100vw;
+  background-color: rgba(0, 255, 255, 0);
+  position: absolute;
+  margin: 0px auto;
+  padding: 0px;
+  height: 100vh;
+}
+
+.inside-two {
+  display: flex;
+  flex-direction: row;
+}
+
+.good-enough {
+  color: transparent;
+  width: 50%;
+  height: 100vh;
+  background-color: rgba(0, 0, 255, 0);
+}
+
+.good-enough-later:hover {
+  background-color: rgb(219, 33, 0);
+  transition: background-color 500ms linear;
+  z-index: 5;
+  line-height: 100vh;
+  font-size: 10vh;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.two-blocks-later:hover .inside-two {
+  background-color: black;
+  transition: background-color 500ms linear;
+  z-index: 5;
+}
+
+.dig-deeper {
+  color: transparent;
+  width: 50%;
+  height: 100vh;
+  background-color: rgba(128, 0, 128, 0);
+}
+
+.dig-deeper-later:hover {
+  background-color: rgb(0, 161, 0);
+  transition: background-color 500ms linear;
+  z-index: 5;
+  font-size: 10vh;
+  color: black;
+  text-align: center;
+  line-height: 100vh;
+}
+
+.red-darkred {
+  animation: fadecolorred 4s forwards;
 }
 
 .red-yellow {
@@ -13,6 +74,7 @@
 }
 
 .project {
+  z-index: 1;
   display: flex;
   font-family: "Kalnia", serif;
   justify-content: center;
@@ -35,6 +97,17 @@
 .remove2 {
   /* font-family: "Courier New", Courier, monospace; */
   color: rgb(37, 0, 0);
+  font-size: 20vh;
+  font-weight: 500;
+  text-align: center;
+  line-height: 50vh;
+  animation: fadeIn 3s;
+  /* opacity: 1; */
+}
+
+.remove3 {
+  /* font-family: "Courier New", Courier, monospace; */
+  color: rgb(255, 255, 255);
   font-size: 20vh;
   font-weight: 500;
   text-align: center;
@@ -125,5 +198,14 @@
   }
   to {
     background-color: rgb(145, 255, 19);
+  }
+}
+
+@keyframes fadecolorred {
+  from {
+    background-color: rgb(190, 0, 25);
+  }
+  to {
+    background-color: rgb(87, 0, 0);
   }
 }

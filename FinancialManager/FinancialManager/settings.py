@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-_k2)$=z471-bs4q26%lif)vh1z(uat^%n7t69krpl5ynt1edje
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', '127.0.0.1']
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1']
 
 
 # Application definition
@@ -74,12 +74,12 @@ WSGI_APPLICATION = 'FinancialManager.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 # Password validation
@@ -117,11 +117,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILE_DIRS = [BASE_DIR / 'static']
-# STATIC_ROOT = "C:\\Users\\ganes\\G\\projects\\Finman\\FinancialManager\\static"
+STATIC_ROOT = BASE_DIR / 'assets'
+STATICFILES_DIRS = [BASE_DIR / 'static',]
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = [BASE_DIR / 'static/media']
+
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = "C:\\Users\\ganes\\G\\projects\\Finman\\FinancialManager\\static\\media"
 
 CSS_URL = '/css/'
 CSS_ROOT = [BASE_DIR / 'static/css']

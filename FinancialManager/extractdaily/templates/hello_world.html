@@ -5,16 +5,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Kalnia:wght@200&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <title>Finance Manager</title>
   </head>
   <body class="body" id="body">
+    <div class="two-blocks" id="two-blocks">
+      <div class="inside-two" id="inside-two">
+        <div class="dig-deeper" id="dig-deeper">DIG DEEPER</div>
+        <div
+          class="good-enough"
+          id="good-enough"
+          onclick="window.location.href = 'https://docs.google.com/spreadsheets/d/1hjvKRcpmsiKa1v-4rOwRFnYqBmzub5abgiasBo12V6s/edit#gid=791928584';"
+        >
+          CHECK OUT
+        </div>
+      </div>
+    </div>
     <div class="project">
       <div class="project-name" id="project-name">FM</div>
       <div class="project-description">FINANCE MANAGER</div>
@@ -45,6 +57,14 @@
           //extractText.classList.add("project-extracting");
         }, 2000);
       }, 10000);
+      setTimeout(function () {
+        var twoblocks = document.getElementById("two-blocks");
+        twoblocks.classList.add("two-blocks-later");
+        var goodenough = document.getElementById("good-enough");
+        goodenough.classList.add("good-enough-later");
+        var digdeeper = document.getElementById("dig-deeper");
+        digdeeper.classList.add("dig-deeper-later");
+      }, 15000);
     </script>
   </body>
 </html>
