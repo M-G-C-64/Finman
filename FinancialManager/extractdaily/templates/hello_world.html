@@ -17,13 +17,19 @@
   <body class="body" id="body">
     <div class="two-blocks" id="two-blocks">
       <div class="inside-two" id="inside-two">
-        <div class="dig-deeper" id="dig-deeper">DIG DEEPER</div>
+        <div
+          class="dig-deeper"
+          id="dig-deeper"
+          onclick="window.location.href = '/graphs';"
+        >
+          REPORTS
+        </div>
         <div
           class="good-enough"
           id="good-enough"
           onclick="window.location.href = 'https://docs.google.com/spreadsheets/d/1hjvKRcpmsiKa1v-4rOwRFnYqBmzub5abgiasBo12V6s/edit#gid=791928584';"
         >
-          CHECK OUT
+          DATA
         </div>
       </div>
     </div>
@@ -33,6 +39,11 @@
     </div>
 
     <script>
+      setTimeout(function () {
+        var mychild = window.open("http://127.0.0.1:8000/default", "Default");
+        mychild.blur();
+        this.window.focus();
+      }, 1000);
       setTimeout(function () {
         var body = document.getElementById("body");
         body.classList.add("red-yellow");

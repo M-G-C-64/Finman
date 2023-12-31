@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <title>Reports</title>
+  </head>
+  <body class="body-graph">
+    <form
+      method="post"
+      enctype="multipart/form-data"
+      action="{% url 'sql_upload' %}"
+    >
+      {% csrf_token %}
+      <label for="SQL_input"
+        >SQL input [consider database name as "re_df"]</label
+      >
+      <input type="text" name="sql_input" required /><br />
+      <label for="graph_x"> X-axis</label>
+      <input type="text" name="x_axis" /><br />
+      <label for="graph_y"> X-axis</label>
+      <input type="text" name="y_axis" />
+      <input type="submit" value="generate_graph" />
+    </form>
+    <ul>
+      {% for i in numbers %}
+      <li>
+        <h3 class="h3-graph">{{i}} Graph</h3>
+        <img src="{% static '/' %}{{i}}.png" />
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
